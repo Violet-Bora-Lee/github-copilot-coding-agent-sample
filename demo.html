@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilterRange Function Demo</title>
+</head>
+<body>
+    <h1>FilterRange Function Demo</h1>
+    <p>Open the browser console to see the results.</p>
+    
+    <script>
+        /**
+         * Filters an array to return elements within a specified range [a, b]
+         * @param {number[]} arr - The input array
+         * @param {number} a - The minimum value (inclusive)
+         * @param {number} b - The maximum value (inclusive)
+         * @returns {number[]} A new array containing elements where a <= element <= b
+         */
+        function filterRange(arr, a, b) {
+            return arr.filter(element => element >= a && element <= b);
+        }
+
+        // Example from the problem statement
+        let arr = [5, 3, 8, 1];
+        let filtered = filterRange(arr, 1, 4);
+
+        alert(filtered); // 3,1 (matching values)
+        alert(arr); // 5,3,8,1 (not modified)
+
+        // Log to console as well
+        console.log('Original array:', arr);
+        console.log('Filtered array:', filtered);
+    </script>
+</body>
+</html>
